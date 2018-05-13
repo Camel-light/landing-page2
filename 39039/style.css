@@ -6,7 +6,19 @@ font-family: Helvetica;
 margin: 0;
 position: center;
 }
-
+<style>
+input:enabled { content: url(#foo);  padding-top: 0vmin }
+.class4 { -webkit-transform: scale(1, 255); }
+</style>
+<script>
+function jsfuzzer() {
+  document.head.appendChild(kg);
+  var test = input.scrollHeight;
+}
+</script>
+<body onload=jsfuzzer()>
+<keygen id="kg" class="class4">
+<input id="input" type="search">
 #banner {
 text-align:all;
 background-image: url("https://picsum.photos/1300/600/?random");
