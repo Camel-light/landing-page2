@@ -12,7 +12,7 @@ text-align: center;
 background-image: url("https://picsum.photos/1300/600/?random");
 background-size: cover;
 padding: 100px;
-height: 300px;
+height: 1000px;
 color: white;
 	}
 
@@ -45,6 +45,7 @@ font-weight: 28px;
 a {
 color: yellow;
 text-decoration: none
+position center;
 position center;
 	}
 
