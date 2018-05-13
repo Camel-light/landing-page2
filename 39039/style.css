@@ -8,11 +8,11 @@ position: center;
 }
 
 #banner {
-text-align: center;
+text-align:all;
 background-image: url("https://picsum.photos/1300/600/?random");
 background-size: cover;
-padding: 100px;
-height: 300px;
+padding: 10000px;
+height: 1300px;
 color: white;
 	}
 
