@@ -24,8 +24,8 @@ h1 {
 
 #banner h1{
 	
-	color:white;
-	font-size: 50px;
+	color:red;
+	font-size: 23px;
 		}
 
 .card {
@@ -44,7 +44,8 @@ font-weight: 28px;
 
 a {
 color: yellow;
-text-decoration: none;
+text-decoration: none
+position center;
 	}
 
 a:hover {
